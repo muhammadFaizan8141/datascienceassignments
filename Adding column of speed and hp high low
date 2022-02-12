@@ -1,0 +1,21 @@
+import pandas as pd
+data=pd.read_csv("C:\\Pokemon.csv")
+data.head()
+def set_attack(val):
+    if val > attack_mean:
+        return "high attack"
+    elif val == attack_mean :
+        return " netural attack"
+    else :
+        return " low attack"
+data["attack_high_low"] = data ["Attack"].apply(set_attack)
+attack_mean=data["HP"].mean()
+def set_attack(val):
+    if val > attack_mean:
+        return "high hp"
+    elif val == attack_mean :
+        return " netural hp"
+    else :
+        return " low hp"
+ data["High_LOw_Hp"] = data["HP"].apply(set_attack)
+ dataS
